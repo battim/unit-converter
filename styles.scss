@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+$white: #ffffff;
+$background: #1c1c1c;
+$dark-text: #353535;
+$bright-blue: #6943ff;
+$bg-light: #f4f4f4;
+$bg-dark: #1f2937;
+$unit-bg-light: $white;
+$unit-bg-dark: #273549;
+$unit-txt-light: #5a537b;
+$unit-txt-dark: #ccc1ff;
+$border: #b295ff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+	margin: 0;
+	background-color: $background;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $dark-text;
+  text-align: center;
+}
+
+.main {
+  min-width: 550px;
+  background-color: $bg-light;
+  position: relative;
+  .header {
+    background-color: $bright-blue;
+    color: $white;
+    padding: 30px;
+    h1 {
+      margin-bottom: 30px;
+    }
+    input {
+      font-size: 58px;
+      font-weight: 800;
+      color: $white;
+      border: 2px solid $border;
+      border-radius: 5px;
+      max-width: 120px;
+      background-color: $bright-blue;
+      text-align: center;
+    }
+    button {
+      background-color: $white;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 15px 30px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+  }
+  &.light-mode{
+    background-color: $bg-dark;
+    color: $white;
+    .conversions {
+      div{
+        background-color: $unit-bg-dark;
+        h2 {
+          color: $unit-txt-dark;
+        }
+      }
+    }
+  }
+  i {
+    font-size: 1rem;
+  }
+  .switch {
+    display: block;
+    position: absolute;
+    top: calc(0% + 5px);
+    cursor: pointer;
+    right: calc(0% + 5px);
+    font-size: 1rem;
+    &:hover {
+      color: var(--bright-green);
+    }
+  }
+  .conversions {
+    padding: 20px;
+    div {
+      background-color: $white;
+      padding: 20px;
+      &:nth-child(2) {
+        margin: 20px 0;
+      }
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $unit-txt-light;
+      margin: 10px auto;
+    }
+  }
+}
